@@ -9,7 +9,7 @@ const filter = {
     endDate: moment().endOf('month')
 }
 
-test('sould generate set start date action object', () => {
+test('should generate set start date action object', () => {
     const action = setStartDate(moment(0));
     expect(action).toEqual({
         type: 'SET_START_DATE',
@@ -17,7 +17,7 @@ test('sould generate set start date action object', () => {
     })
 });
 
-test('sould generate set end date action object', () => {
+test('should generate set end date action object', () => {
     const action = setEndDate(moment(0));
     expect(action).toEqual({
         type: 'SET_END_DATE',
@@ -26,7 +26,7 @@ test('sould generate set end date action object', () => {
 });
 
 
-test('sould genarate  set text filter with text value', () => {
+test('should genarate  set text filter with text value', () => {
     const action = setTextFilter('Rent');
     expect(action).toEqual({
         type: 'SET_TEXT_FILTER',
@@ -34,7 +34,7 @@ test('sould genarate  set text filter with text value', () => {
     })
 });
 
-test('sould genarate  set text filter with text default', () => {
+test('should genarate  set text filter with text default', () => {
     const action = setTextFilter('');
     expect(action).toEqual({
         type: 'SET_TEXT_FILTER',
@@ -42,14 +42,14 @@ test('sould genarate  set text filter with text default', () => {
     })
 });
 
-test('sould genarate  action object fro sort by date', () => {
+test('should genarate  action object fro sort by date', () => {
     const action = sortByDate();
     expect(action).toEqual({
         type: 'SORT_BY_DATE'
     })
 });
 
-test('sould genarate  action object fro sort by amount', () => {
+test('should genarate  action object fro sort by amount', () => {
     const action = sortByAmount();
     expect(action).toEqual({
         type: 'SORT_BY_AMOUNT'
